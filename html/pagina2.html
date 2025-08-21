@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UFT-8">
+    <title>Reserva</title>
+</head>
+
+<body>
+    <h1>Registro de reservas</h1>
+
+    <fieldset><legend>formulario</legend>
+        <form action="pagina2.html" >
+
+            <label for="nombre">Apellido y Nombre</label>
+            <input type="text" id="nombre" maxlength="100">
+
+            <br><br>
+            <label for="fecha">fecha de nacimiento</label>
+            <input type="date" id="fecha" name="fecha">
+
+            <br>
+            <p>selecciona sexo</p>
+            <input type="radio" id="femenino" name="sexo">
+            <label for="femenino">femenino</label>
+            <input type="radio" id="masculino" name="sexo">
+            <label for="masculino">masculino</label>
+
+            <br><br>
+            <label for="dni">ingrese su DNI</label>
+            <input type="number" id="dni" maxlength="8" pattern="\d{8}" title="Debe tener 8 dígitos">
+            <br><br>
+            <label for="pasajes">cantidad de pasajes</label>
+            <input type="number" id="pasajes"  min="1" max="50">
+
+            <br><br>
+            <label for="ubicacion">elegir ubicacion del haciento</label>
+            <select name="ubicacion" id="ubicacion">
+                <option value="ve">Ventanilla</option>
+                <option value="ce">Centro</option>
+                <option value="pa">Pasillo</option>
+            </select>
+
+            <br><br>
+            <label for="clase">seleccione clase</label>
+            <select name="clase" id="ubicacion">
+                <option value="ec">Economica</option>
+                <option value="ej">Ejecutiva</option>
+            </select>
+
+            <br><br>
+            <label for="silla">numero de silla</label>
+            <input type="number" id="silla"  min="1" max="50">
+
+            <br><br>
+            <label for="fecha_vuelo">fecha del vuelo</label>
+            <input type="date" id="fecha_vuelo" name="fecha_vuelo" disabled> 
+
+            <br><br>
+            <label for="hora">hora de vuelo:</label>
+            <input type="time" id="hora" name="hora" disabled>
+
+            <br><br>
+            <label for="origen">seleccione origen</label>
+            <select name="origen" id="origen" disabled>
+                <option value="me">MENDOZA</option>
+                <option value="co">CORDOBA</option>
+                <option value="tu">TUCUMAN</option>
+            </select>
+
+            <br><br>
+            <label for="destino">seleccione destino</label>
+            <select name="destino" id="destino" disabled>
+                <option value="me">MENDOZA</option>
+                <option value="co">CORDOBA</option>
+                <option value="tu">TUCUMAN</option>
+            </select>
+
+            <br><br>
+            <input type="submit" name="enviar" value="Aceptar" >
+            <input type="reset" name="enviar" value="cancelar" >
+
+        </form>
+
+    </fieldset>
+
+    <footer>
+        <p>© Sitio Oficial de Compañía Argentina-2025</p>
+            
+    </footer>
+</body>
+</html>
