@@ -1,14 +1,29 @@
 .titulo{
-    color: #5F9EA0;
-    text-align: center;
+    color: #6495ED;
+    /*text-align: center;*/ /*como uso fit-content text-aling ya no afecta al titulo*/
+    width: fit-content; /*esto evita que ocupe todo el ancho de la pagina*/
+    background-color: #FFFFE0;
+    padding: 1% 5%;
+    margin: 0 auto; /*alternativa a text-aling para centrar el titulo*/
 }
 
 .subtitulo{
-    color: #5F9EA0;
+    color: #6495ED;
+    width: fit-content; /*esto evita que ocupe todo el ancho de la pagina*/
+    background-color: #FFFFE0;
+    padding: 0.5% 4%;
 }
 
-h2{
-    color: #1E90FF;
+
+.contenedor_titulo img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+
 }
 
 .barra{
@@ -25,6 +40,14 @@ h2{
     background-color: #FFFFE0;
 }
 
+.formulario h3{
+    color: #6495ED;
+}
+
+.formulario label{
+    color: #6495ED;
+}
+
 #text_footer{
     position: relative;/*para poder mover usando top y left*/
     top: 30px;   /* lo baja */
@@ -35,4 +58,5 @@ h2{
     position: relative;
     top: -1em;
 }
+
 
