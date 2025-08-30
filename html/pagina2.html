@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <meta charset="UFT-8">
+    <meta charset="UTF-8">
     <title>Reserva</title>
 </head>
 
@@ -28,7 +28,7 @@
 
             <br><br>
             <label for="dni">ingrese su DNI</label>
-            <input type="number" id="dni" maxlength="8" pattern="\d{8}" title="Debe tener 8 dígitos">
+            <input type="number" id="dni" min="10000000" max="99999999" title="Debe tener 8 dígitos">
             <br><br>
             <label for="pasajes">cantidad de pasajes</label>
             <input type="number" id="pasajes"  min="1" max="50">
@@ -43,7 +43,7 @@
 
             <br><br>
             <label for="clase">seleccione clase</label>
-            <select name="clase" id="ubicacion">
+            <select name="clase" id="clase">
                 <option value="ec">Economica</option>
                 <option value="ej">Ejecutiva</option>
             </select>

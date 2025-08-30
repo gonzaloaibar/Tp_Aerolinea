@@ -1,0 +1,38 @@
+.titulo{
+    color: #5F9EA0;
+    text-align: center;
+}
+
+.subtitulo{
+    color: #5F9EA0;
+}
+
+h2{
+    color: #1E90FF;
+}
+
+.barra{
+    background-color: #6495ED; /*color de la barra del menu*/
+}
+
+.barra .nav-link:hover{
+    color: #F0FFFF;
+}
+
+.formulario{
+    text-align: center;/*centrar el texto del formulario*/
+
+    background-color: #FFFFE0;
+}
+
+#text_footer{
+    position: relative;/*para poder mover usando top y left*/
+    top: 30px;   /* lo baja */
+    text-align: center;
+}
+
+.boton{
+    position: relative;
+    top: -1em;
+}
+
