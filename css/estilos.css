@@ -1,8 +1,7 @@
 .titulo{
     color: #6495ED;
-    /*text-align: center;*/ /*como uso fit-content text-aling ya no afecta al titulo*/
     width: fit-content; /*esto evita que ocupe todo el ancho de la pagina*/
-    background-color: #FFFFE0;
+    background-color: #e8ebeb;
     padding: 1% 5%;
     margin: 0 auto; /*alternativa a text-aling para centrar el titulo*/
 }
@@ -10,12 +9,12 @@
 .subtitulo{
     color: #6495ED;
     width: fit-content; /*esto evita que ocupe todo el ancho de la pagina*/
-    background-color: #FFFFE0;
+    background-color: #e8ebeb;
     padding: 0.5% 4%;
 }
 
 
-.contenedor_titulo img{
+.contenedor_titulo img{ /*para que la imagen quede debajo de todo*/
     position: absolute;
     top: 0;
     left: 0;
@@ -23,7 +22,7 @@
     height: 100%;
     object-fit: cover;
     z-index: -1;
-
+    position: fixed; /*para que se desplace a medida que bajas*/
 }
 
 .barra{
@@ -37,7 +36,7 @@
 .formulario{
     text-align: center;/*centrar el texto del formulario*/
 
-    background-color: #FFFFE0;
+    background-color: #F0F8FF;
 }
 
 .formulario h3{
@@ -59,4 +58,6 @@
     top: -1em;
 }
 
-
+#formulario2{ /*solo lo uso para bajar un poco el formulario de la pagina 2*/
+    margin-top: 2%;
+}
