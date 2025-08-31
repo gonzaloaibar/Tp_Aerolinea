@@ -19,75 +19,94 @@
     </div>
 
     <div class="container formulario">
-        <form action="pagina2.html" id="formulario2">
+        <form action="pagina2css.html" id="formulario2">
 
             <h3>Complete el formulario</h3>
 
-            <br>
-            <label for="nombre">Apellido y Nombre</label>
-            <input type="text" id="nombre" maxlength="100">
+            <div class="row mb-5">
+                <div class="col-md-6">
+                    <label for="nombre">Apellido y Nombre</label>
+                    <input type="text" id="nombre" maxlength="100">
+                </div>
+                <div class="col-md-6">
+                    <label for="fecha">fecha de nacimiento</label>
+                    <input type="date" id="fecha" name="fecha">
+                </div>
+            </div>
 
-            <br><br>
-            <label for="fecha">fecha de nacimiento</label>
-            <input type="date" id="fecha" name="fecha">
+            <div class="row mb-5">
+                <div class="col-md-6">
+                    <p style="color: #6495ED;">selecciona sexo</p>
+                    <input type="radio" id="femenino" name="sexo">
+                    <label for="femenino">femenino</label>
+                    <input type="radio" id="masculino" name="sexo">
+                    <label for="masculino">masculino</label>
+                </div>
+                <div class="col-md-6">
+                    <label for="dni">ingrese su DNI</label>
+                    <input type="number" id="dni" min="10000000" max="99999999" title="Debe tener 8 dígitos">
+                </div>
+            </div>
 
-            <br><br>
-            <p style="color: #6495ED;">selecciona sexo</p>
-            <input type="radio" id="femenino" name="sexo">
-            <label for="femenino">femenino</label>
-            <input type="radio" id="masculino" name="sexo">
-            <label for="masculino">masculino</label>
+            
+            <div class="row mb-5">
+                <div class="col-md-6">
+                    <label for="pasajes">cantidad de pasajes</label>
+                    <input type="number" id="pasajes"  min="1" max="50">
+                </div>
+                <div class="col-md-6">
+                    <label for="ubicacion">elegir ubicacion del haciento</label>
+                    <select name="ubicacion" id="ubicacion">
+                        <option value="ve">Ventanilla</option>
+                        <option value="ce">Centro</option>
+                        <option value="pa">Pasillo</option>
+                    </select>
+                </div>
+            </div>
 
-            <br><br>
-            <label for="dni">ingrese su DNI</label>
-            <input type="number" id="dni" min="10000000" max="99999999" title="Debe tener 8 dígitos">
-            <br><br>
-            <label for="pasajes">cantidad de pasajes</label>
-            <input type="number" id="pasajes"  min="1" max="50">
+            <div class="row mb-5">
+                <div class="col-md-6">
+                <label for="clase">seleccione clase</label>
+                <select name="clase" id="clase">
+                    <option value="ec">Economica</option>
+                    <option value="ej">Ejecutiva</option>
+                </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="silla">numero de silla</label>
+                    <input type="number" id="silla"  min="1" max="50">
+                </div>
+            </div>
 
-            <br><br>
-            <label for="ubicacion">elegir ubicacion del haciento</label>
-            <select name="ubicacion" id="ubicacion">
-                <option value="ve">Ventanilla</option>
-                <option value="ce">Centro</option>
-                <option value="pa">Pasillo</option>
-            </select>
-
-            <br><br>
-            <label for="clase">seleccione clase</label>
-            <select name="clase" id="clase">
-                <option value="ec">Economica</option>
-                <option value="ej">Ejecutiva</option>
-            </select>
-
-            <br><br>
-            <label for="silla">numero de silla</label>
-            <input type="number" id="silla"  min="1" max="50">
-
-            <br><br>
-            <label for="fecha_vuelo">fecha del vuelo</label>
-            <input type="date" id="fecha_vuelo" name="fecha_vuelo" disabled> 
-
-            <br><br>
-            <label for="hora">hora de vuelo:</label>
-            <input type="time" id="hora" name="hora" disabled>
-
-            <br><br>
-            <label for="origen">seleccione origen</label>
-            <select name="origen" id="origen" disabled>
-                <option value="me">MENDOZA</option>
-                <option value="co">CORDOBA</option>
-                <option value="tu">TUCUMAN</option>
-            </select>
-
-            <br><br>
-            <label for="destino">seleccione destino</label>
-            <select name="destino" id="destino" disabled>
-                <option value="me">MENDOZA</option>
-                <option value="co">CORDOBA</option>
-                <option value="tu">TUCUMAN</option>
-            </select>
-            <br>
+            <div class="row mb-5">
+                <div class="col-md-6">
+                    <label for="fecha_vuelo">fecha del vuelo</label>
+                    <input type="date" id="fecha_vuelo" name="fecha_vuelo" disabled> 
+                </div>
+                <div class="col-md-6">
+                    <label for="hora">hora de vuelo:</label>
+                    <input type="time" id="hora" name="hora" disabled>
+                </div>
+            </div>
+            
+            <div class="row mb-5">
+                <div class="col-md-6">
+                    <label for="origen">seleccione origen</label>
+                    <select name="origen" id="origen" disabled>
+                        <option value="me">MENDOZA</option>
+                        <option value="co">CORDOBA</option>
+                        <option value="tu">TUCUMAN</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="destino">seleccione destino</label>
+                    <select name="destino" id="destino" disabled>
+                        <option value="me">MENDOZA</option>
+                        <option value="co">CORDOBA</option>
+                        <option value="tu">TUCUMAN</option>
+                    </select>
+                </div>
+            </div>
             
             <br><br>
             <button type="submit" class="btn btn-primary boton">Buscar</button>
