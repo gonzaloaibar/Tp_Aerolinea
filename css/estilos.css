@@ -8,7 +8,7 @@
 
 .subtitulo{
     color: #6495ED;
-    width: fit-content; /*esto evita que ocupe todo el ancho de la pagina*/
+    width: fit-content; 
     background-color: #e8ebeb;
     padding: 0.5% 4%;
 }
