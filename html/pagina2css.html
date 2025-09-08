@@ -18,7 +18,7 @@
          <h1 class="titulo">Registro de reservas</h1>
     </div>
 
-    <div class="container formulario">
+    <div class="container formulario mb-4">
         <form action="pagina2css.html" id="formulario2">
 
             <h3>Complete el formulario</h3>
@@ -37,9 +37,9 @@
             <div class="row mb-5">
                 <div class="col-md-6">
                     <p style="color: #6495ED;">selecciona sexo</p>
-                    <input type="radio" id="femenino" name="sexo">
+                    <input type="radio" id="femenino" name="sexo" value="Femenino">
                     <label for="femenino">femenino</label>
-                    <input type="radio" id="masculino" name="sexo">
+                    <input type="radio" id="masculino" name="sexo" value="Masculino">
                     <label for="masculino">masculino</label>
                 </div>
                 <div class="col-md-6">
@@ -57,9 +57,9 @@
                 <div class="col-md-6">
                     <label for="ubicacion">elegir ubicacion del haciento</label>
                     <select name="ubicacion" id="ubicacion">
-                        <option value="ve">Ventanilla</option>
-                        <option value="ce">Centro</option>
-                        <option value="pa">Pasillo</option>
+                        <option value="ventana">Ventanilla</option>
+                        <option value="centro">Centro</option>
+                        <option value="pasillo">Pasillo</option>
                     </select>
                 </div>
             </div>
@@ -68,8 +68,8 @@
                 <div class="col-md-6">
                 <label for="clase">seleccione clase</label>
                 <select name="clase" id="clase">
-                    <option value="ec">Economica</option>
-                    <option value="ej">Ejecutiva</option>
+                    <option value="economica">Economica</option>
+                    <option value="ejecutiva">Ejecutiva</option>
                 </select>
                 </div>
                 <div class="col-md-6">
@@ -93,26 +93,52 @@
                 <div class="col-md-6">
                     <label for="origen">seleccione origen</label>
                     <select name="origen" id="origen" disabled>
-                        <option value="me">MENDOZA</option>
-                        <option value="co">CORDOBA</option>
-                        <option value="tu">TUCUMAN</option>
+                        <option value="mendoza">MENDOZA</option>
+                        <option value="cordoba">CORDOBA</option>
+                        <option value="tucuman">TUCUMAN</option>
                     </select>
                 </div>
                 <div class="col-md-6">
                     <label for="destino">seleccione destino</label>
                     <select name="destino" id="destino" disabled>
-                        <option value="me">MENDOZA</option>
-                        <option value="co">CORDOBA</option>
-                        <option value="tu">TUCUMAN</option>
+                        <option value="mendoza">MENDOZA</option>
+                        <option value="cordoba">CORDOBA</option>
+                        <option value="tucuman">TUCUMAN</option>
                     </select>
                 </div>
             </div>
             
             <br><br>
-            <button type="submit" class="btn btn-primary boton">Buscar</button>
+            <button type="submit" class="btn btn-primary boton">Agregar</button>
             <button type="reset" class="btn btn-dark boton">Cancelar</button>
 
         </form>
+
+    </div>
+
+    <div class="container-fluid">
+        <h3>Informacion de las Reservas</h3>
+         <div class="mb-5">
+            <table class="table table-bordered border-primary">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>DNI</th>
+                        <th>sexo</th>
+                        <th>Origen</th>
+                        <th>Destino</th>
+                        <th>fecha</th>
+                        <th>Clase</th>
+                        <th>Ubicacion</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    
+                </tbody>
+            </table>
+        </div>
 
     </div>
 
@@ -122,6 +148,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  
+    <script src="../js/script1.js"></script>
+
 </body>
 </html>
