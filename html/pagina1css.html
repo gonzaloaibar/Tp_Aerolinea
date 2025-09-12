@@ -49,23 +49,27 @@
 
                 <label for="origen">seleccione origen</label>
                 <select name="origen" id="origen">
-                    <option value="me">MENDOZA</option>
-                    <option value="co">CORDOBA</option>
-                    <option value="tu">TUCUMAN</option>
+                    <option value="nada" disabled selected>elegi una opcion</option>
+                    <option value="mendoza">MENDOZA</option>
+                    <option value="cordoba">CORDOBA</option>
+                    <option value="tucuman">TUCUMAN</option>
                 </select>
 
                 <br><br>
                 <label for="destino">seleccione destino</label>
                 <select name="destino" id="destino">
-                    <option value="me">MENDOZA</option>
-                    <option value="co">CORDOBA</option>
-                    <option value="tu">TUCUMAN</option>
+                    <option value="nada" disabled selected>elegi una opcion</option>
+                    <option value="mendoza">MENDOZA</option>
+                    <option value="cordoba">CORDOBA</option>
+                    <option value="tucuman">TUCUMAN</option>
                 </select>
 
                 <br><br>
-                <label for="fecha">Selecciona una fecha:</label>
-                <input type="date" id="fecha" name="fecha">
-                <br><br>
+                <div class="campo_fecha mb-3">
+                    <p id="error_fecha"></p>
+                    <label for="fecha">Selecciona una fecha:</label>
+                    <input type="date" id="fecha" name="fecha">
+                </div>
 
                 <br>
                 <button type="submit" class="btn btn-primary boton">Buscar</button>

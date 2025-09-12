@@ -1,18 +1,22 @@
 
-//EJERCICIO 1
+
+//Validaciones a la pagina 1 (EJERCICIO 1 PT1, EJERCICIO 2 PT2)
 
 function confirmar_fecha_vuelo(fecha){
     const hoy=new Date();
     hoy.setHours(0,0,0,0);
 
-    const fecha_vuelo= new Date(fecha);
+    const fecha_vuelo= new Date(fecha.value);
     fecha_vuelo.setHours(0,0,0,0);
    
+    const mensaje=document.getElementById("error_fecha")
 
     if(hoy.getTime() < fecha_vuelo.getTime()){
+        mensaje.textContent="";
         return true;
     }else{
-        alert("fecha invalida (no puede ser menor a la fecha actual)");
+        mensaje.textContent=" Fecha  de  Vuelo debe ser Mayor a la Fecha Actual";
+        console.log("fecha invalida (no puede ser menor a la fecha actual)");
         return false;
     }
     
@@ -21,15 +25,42 @@ function confirmar_fecha_vuelo(fecha){
 const form1= document.getElementById("formulario");
 
 if(form1){
-
+    //validar fecha
     form1.addEventListener("submit", function(event){
-        const fechaIngresada = document.getElementById("fecha").value;
+
+        const fechaIngresada = document.getElementById("fecha");
         const fechaValida = confirmar_fecha_vuelo(fechaIngresada);
 
         if(!fechaValida){
             event.preventDefault();
+        }else{
+            fechaIngresada.value="";
         }
+        
     });
+
+     //validar origen-destino
+    const origen=document.getElementById("origen");
+    const destino=document.getElementById("destino");
+    const opciones_destino = destino.querySelectorAll("option");
+
+    origen.addEventListener("change", function(event){
+        opciones_destino.forEach(opcion =>{
+            if(opcion.value!="nada"){
+                opcion.disabled=false;
+            }
+            
+        });
+
+        opciones_destino.forEach(opcion =>{
+           if(opcion.value===origen.value){
+            opcion.disabled=true;
+           }
+           ;
+        });
+       console.log(origen.value);
+    });
+    
 
 }
 
@@ -99,3 +130,5 @@ if(form2){
     });
 }
 
+
+//EJERCICIO 3
