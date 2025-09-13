@@ -67,3 +67,7 @@
 .campo_fecha > p{
     color: red; font-weight: bold;
 }
+
+.campo_origen > p{
+    color: red; font-weight: bold;
+}

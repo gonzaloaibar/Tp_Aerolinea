@@ -47,24 +47,27 @@
             <br>
             <form action="pagina2css.html" target="_blank" id="formulario">
 
-                <label for="origen">seleccione origen</label>
-                <select name="origen" id="origen">
-                    <option value="nada" disabled selected>elegi una opcion</option>
-                    <option value="mendoza">MENDOZA</option>
-                    <option value="cordoba">CORDOBA</option>
-                    <option value="tucuman">TUCUMAN</option>
-                </select>
+                <div class="mb-4">
+                    <label for="origen">seleccione origen</label>
+                    <select name="origen" id="origen">
+                        <!--<option value="nada" disabled selected>elegi una opcion</option>-->
+                        <option value="mendoza">MENDOZA</option>
+                        <option value="cordoba">CORDOBA</option>
+                        <option value="tucuman">TUCUMAN</option>
+                    </select>
+                </div>
 
-                <br><br>
-                <label for="destino">seleccione destino</label>
-                <select name="destino" id="destino">
-                    <option value="nada" disabled selected>elegi una opcion</option>
-                    <option value="mendoza">MENDOZA</option>
-                    <option value="cordoba">CORDOBA</option>
-                    <option value="tucuman">TUCUMAN</option>
-                </select>
+                <div class="campo_origen mb-4">
+                    <p id="error_destino"></p>
+                    <label for="destino">seleccione destino</label>
+                    <select name="destino" id="destino">
+                        <!--<option value="nada" disabled selected>elegi una opcion</option>-->
+                        <option value="mendoza">MENDOZA</option>
+                        <option value="cordoba">CORDOBA</option>
+                        <option value="tucuman">TUCUMAN</option>
+                    </select>
+                </div>
 
-                <br><br>
                 <div class="campo_fecha mb-3">
                     <p id="error_fecha"></p>
                     <label for="fecha">Selecciona una fecha:</label>

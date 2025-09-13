@@ -2,6 +2,7 @@
 
 //Validaciones a la pagina 1 (EJERCICIO 1 PT1, EJERCICIO 2 PT2)
 
+//validar fecha
 function confirmar_fecha_vuelo(fecha){
     const hoy=new Date();
     hoy.setHours(0,0,0,0);
@@ -22,6 +23,32 @@ function confirmar_fecha_vuelo(fecha){
     
 }
 
+//validar origen y destino
+function validar_destino(){
+   
+    const origen=document.getElementById("origen");
+    const destino=document.getElementById("destino");
+    const opciones_destino = destino.querySelectorAll("option");
+    
+
+    opciones_destino.forEach(opcion =>{
+        if(opcion.value!="nada"){
+            opcion.disabled=false;
+        }
+        
+    });
+
+    opciones_destino.forEach(opcion =>{
+        if(opcion.value===origen.value){
+            opcion.disabled=true;
+        }
+        
+    });
+    return true;
+
+
+}
+
 const form1= document.getElementById("formulario");
 
 if(form1){
@@ -39,43 +66,26 @@ if(form1){
         
     });
 
-     //validar origen-destino
-    const origen=document.getElementById("origen");
-    const destino=document.getElementById("destino");
-    const opciones_destino = destino.querySelectorAll("option");
-
-    origen.addEventListener("change", function(event){
-        opciones_destino.forEach(opcion =>{
-            if(opcion.value!="nada"){
-                opcion.disabled=false;
-            }
-            
-        });
-
-        opciones_destino.forEach(opcion =>{
-           if(opcion.value===origen.value){
-            opcion.disabled=true;
-           }
-           ;
-        });
-       console.log(origen.value);
-    });
+    //validar origen
+    document.getElementById("origen").addEventListener("change", validar_destino);
+    validar_destino();
     
 
 }
 
 
-//Ejercicio 2
+//pagina2 (EJERCICIO 2 PT1, EJERCICIO 3 PT2)
 
-function Reserva(destino, origen, fecha_hora, nombre_pasajero, dni, fec_nacimiento, clase, ubicacion){
+function Reserva(destino, origen, fecha_vuelo, nombre_pasajero, dni, fec_nacimiento, clase, ubicacion,sexo){
     this.destino=destino;
     this.origen=origen;
-    this.fecha_hora=fecha_hora;
+    this.fecha_vuelo=fecha_vuelo;
     this.nombre_pasajero=nombre_pasajero;
     this.dni=dni;
     this.fec_nacimiento=fec_nacimiento;
     this.clase=clase;
     this.ubicacion=ubicacion;
+    this.sexo=sexo;
 
 
 }
@@ -90,6 +100,39 @@ class SistemaReserva{
     }
 }
 
+//EJERCICIO 2 (agregar tres reservas de prueba)
+function agregarPasajero(){
+    let pasajero1=new Reserva("mendoza", "tucuman","04/11/2025","rafael", 45613221,"05/09/1990", "ejecutiva", "ventanilla","Masculino");
+    let pasajero2=new Reserva("cordoba", "tucuman","04/11/2025","jorge", 43613221,"05/10/1990", "ejecutiva", "pasillo","Masculino");
+    let pasajero3=new Reserva("tucuman", "mendoza","04/11/2025", "mariana", 47888991,"05/09/2000", "econimica", "centro","Masculino");
+
+    const Sistema=new SistemaReserva();
+    Sistema.agregarReserva(pasajero1);
+    Sistema.agregarReserva(pasajero2);
+    Sistema.agregarReserva(pasajero3);
+
+    const tabla=document.getElementById("tabla").getElementsByTagName("tbody")[0];
+
+    for(let i=0;i<Sistema.reservas.length;i++){
+        let reser=Sistema.reservas[i];
+        const fila=document.createElement('tr');
+        fila.innerHTML=`
+            <td>${reser.nombre_pasajero}</td>
+            <td>${reser.dni}</td>
+            <td>${reser.sexo}</td>
+            <td>${reser.origen}</td>
+            <td>${reser.destino}</td>
+            <td>${reser.fecha_vuelo}</td>
+            <td>${reser.clase}</td>
+            <td>${reser.ubicacion}</td>
+        `;
+        tabla.appendChild(fila);
+    }
+}
+agregarPasajero();
+
+
+//para agregar reservas mediante el formulario
 const form2= document.getElementById("formulario2");
 
 if(form2){
@@ -130,5 +173,15 @@ if(form2){
     });
 }
 
+//Ejercicio 3
 
-//EJERCICIO 3
+const clase=document.getElementById("clase");
+
+clase.addEventListener("change", function(event){
+    
+
+});
+
+
+
+
